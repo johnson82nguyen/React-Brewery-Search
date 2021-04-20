@@ -1,0 +1,81 @@
+.center {
+  text-align: center;
+  padding-top: 50px;
+  border: 1px;
+  color: #FFFFFF;
+}
+
+.customInk{
+
+  padding-bottom: 30px;
+  font-size: 300px;
+}
+.center1 {
+
+  padding-bottom: 30px;
+  text-align: center;
+  border: 1px;
+}
+
+.cash {
+  font-size: 30px;
+}
+
+li{
+  padding-top: 30px;
+}
+
+.p10{
+  font-size: 100px;
+  color: #fff;
+  text-align: center;
+
+}
+
+.buttondiv {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+}
+
+.center2 {
+  text-align: center;
+  border: 1px;
+}
+
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.input{
+  width: 600px;
+  height: 37px;
+  opacity: 0.5;
+  padding: 8px 20px;
+  border-radius: 2px;
+  outline: none;
+  border: white;
+}
+
+.btn3{
+  padding: 8px 20px;
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+}
+.btnsize{
+  height:50px;
+
+}
