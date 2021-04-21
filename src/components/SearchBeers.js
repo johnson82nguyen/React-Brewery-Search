@@ -14,7 +14,7 @@ function SearchBeers() {
   {/* Used to check if input is empty */}
   const [emptyResult, setEmptyResult] = useState(false);
 
-  {/* search input set to empty initially, setSearchInput later updates when user searches for a brewery*/}
+  {/* search input set to empty initially, setSearchInput later updates when user searches for a brewery */}
   const [searchInput, setSearchInput] = useState("");
 
   {/* Used to check state of modal, whether we want to display or not */}
@@ -30,16 +30,19 @@ function SearchBeers() {
 
   {/* Used to clear Breweries Array
       Upon click, setBreweries back to Empty Array
+      Clearing the result should also hide the modal
   */}
   const clearResults = () => {
+    setSearchInput("");
     setBreweries([]);
     setEmptyResult(false);
-    setSearchInput("");
+    setShowModal(false);
   };
 
    {/*
    Makes a fetch call to Openbrewerydb api
    Fetches the data
+   If data results are less than one, then there are no JSON items
    */}
    const fetchBreweries = () => {
      fetch(`https://api.openbrewerydb.org/breweries/search?query=${searchInput}`)
@@ -115,7 +118,7 @@ function SearchBeers() {
         </Button>
     </div>
         {/* List of breweries
-          if emptyResult then return N/A */}
+            if emptyResult then return N/A */}
         <ul className='Content'> {breweriesList}
         {emptyResult === true &&
         ( <p className="p10">N/A
@@ -126,5 +129,6 @@ function SearchBeers() {
     </>
     );
 
+{/* End of code*/ }
 }
 export default SearchBeers;

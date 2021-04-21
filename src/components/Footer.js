@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom';
 *** The Footer will contain information about Modus, and external links to their site
 *** Footer will also contain the source code of this application
 */}
-
 function Footer() {
   return (
     <div className='footer-container'>

@@ -8,7 +8,6 @@ import Typical from 'react-typical';
     Renders details down below. Uses Typical and button component.
     Doesn't have footer because implemented within Home.js
 */}
-
 function HomePage() {
   return (
     <div className='Home-container'>
