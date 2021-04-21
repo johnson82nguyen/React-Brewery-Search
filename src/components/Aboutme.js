@@ -4,7 +4,7 @@ import { Button } from './Button';
 import './Aboutme.css';
 
 {/* About me page
-    This component is called within Home component and will render information below
+    This component is called within Home component and will display information below
 */}
 function AboutMe(){
   return (

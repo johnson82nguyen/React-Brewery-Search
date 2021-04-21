@@ -5,8 +5,8 @@ import './HomePage.css';
 import Typical from 'react-typical';
 
 {/* This is my homepage
-    Renders details down below. Uses Typical and button component.
-    Doesn't have footer because implemented within Home.js
+    returns details down below. Uses Typical and button component.
+    Doesn't have footer because it's implemented within Home.js
 */}
 function HomePage() {
   return (
@@ -19,11 +19,12 @@ function HomePage() {
       wrapper="b"
       steps={[
       "Hi Modus team!", 1500,
-      "I'm a Software Engineer",2000,
-      "I'm a Computer Scientist",2000,
-      "I'm a UMN graduate",2000,
-      "I'm a lover of all music",2000,
-      "I'm a tennis/basketball player ",2000,
+      "I'm a Software Engineer",1500,
+      "I'm a Computer Scientist",1500,
+      "I'm a UMN graduate",1500,
+      "I'm a music lover",1500,
+      "I'm a tennis/basketball player ",1500,
+      "I'm a believer",1500,
       "Welcome to my project!",7000]} />
       </p>
       <p>Final project for Modus</p>

@@ -6,7 +6,7 @@ import AboutMe from '../Aboutme';
 
 {/* This is my Home page
     When <Home/> is called in App() it will render this function.
-    Home() will render HomePage, AboutMe, and Footer
+    Home() will display HomePage, AboutMe, and Footer
 */}
 function Home() {
   return (

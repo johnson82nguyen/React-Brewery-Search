@@ -13,7 +13,7 @@ function Navbar() {
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
-  {/* Shows button, Button is responsive to window size, if the smaller the window, the button will turn false and disappear */}
+  {/* Shows button, Button is responsive to window size, the smaller the window will start to disappear */}
   const showButton = () => {
     if (window.innerWidth <= 960) { setButton(false); }
     else {
