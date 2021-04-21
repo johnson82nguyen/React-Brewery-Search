@@ -21,8 +21,8 @@ function SearchBeers() {
   const [showModal, setShowModal] = useState(false);
 
   {/* Opens Modal
-      Each click flips the boolean
-      meaning open and then close upon each click/call
+      Each click sets true to false
+      meaning open and then close
   */}
   const openModal = () => {
     setShowModal(prev => !prev)
@@ -39,9 +39,10 @@ function SearchBeers() {
     setShowModal(false);
   };
 
-   {/*  Makes a fetch call to Openbrewerydb api
-        Fetches the data
-        If data results are less than one, then there are no JSON items
+   {/*
+   Makes a fetch call to Openbrewerydb api
+   Fetches the data
+   If data results are less than one, then there are no JSON items
    */}
    const fetchBreweries = () => {
      fetch(`https://api.openbrewerydb.org/breweries/search?query=${searchInput}`)
@@ -53,9 +54,9 @@ function SearchBeers() {
     };
 
   {/* Map breweries to BreweriesList
-      Dynamically sorts breweries by name
-      Makes Div tags containing name, city, and state of brewery
-      Also contains a hidden modal only shown onClick down below
+    Dynamically sorts breweries by name
+    Makes all breweries into Div tags containing name, city, and state
+    Also contains a hidden modal only shown onClick down below
   */}
   const breweriesList = breweries.sort(function (x, y) {
     if (x.name < y.name) { return -1;}
@@ -64,10 +65,10 @@ function SearchBeers() {
     .map((brewery) => (
     <>
     <li>
-      {/* Brewery name, city, and state mapped into a div */}
+      {/* Brewery name, city, and state mapped into a div to display */}
       <div> <h1 className="cash">{brewery.name}</h1> <p> {brewery.city + ", " + brewery.state} </p> </div>
     </li>
-    {/* MyModal won't be triggered unless setShowModal is triggered to true by an onClick event */}
+    {/* My modal won't be triggered unless setShowModal is triggered to true by an onClick event */}
     <MyModal showModal={showModal} setShowModal={setShowModal} brewery={brewery}/>
     </>
     ));
@@ -89,7 +90,7 @@ function SearchBeers() {
          placeholder='Search for a brewery'
          onChange={(e) => setSearchInput(e.target.value)}/>
 
-        {/* Search button, onClick return array of Breweries */}
+        {/*Search button, onClick return array of Breweries */}
         <Button
           className='btns'
           buttonStyle='btn--outline'
@@ -107,7 +108,7 @@ function SearchBeers() {
           <i class="fas fa-eraser"></i>
         </Button>
 
-        {/* Modal button, onClick show details of that brewery */}
+        {/* Modal button, onClick show details of that brewery*/}
         <Button
           className='btns3'
           buttonStyle='btn--outline'
@@ -128,6 +129,6 @@ function SearchBeers() {
     </>
     );
 
-{/* End of code */ }
+{/* End of code*/ }
 }
 export default SearchBeers;

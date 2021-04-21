@@ -9,8 +9,8 @@ const MyModal = ({showModal, setShowModal, brewery }) => {
     const breweryAddress = brewery.street
     const breweryPhone =<div> phone: {brewery.phone} </div>
     const breweryWebsite = <div> <a href= {brewery.website_url}> {brewery.website_url} </a> </div>
-    return <>{showModal ? <div> {breweryAddress} {breweryPhone} {breweryWebsite}  </div> : null }</>; {/* if showModal then return div element of brewery address, phone and website */}
-    };
+    return <> {showModal ? <div key={brewery.id} id={brewery.id}> {breweryAddress} {breweryPhone} {breweryWebsite} </div> : null } </>; {/* if showModal then return div element of brewery address, phone and website */}
+};
 
 
 export default MyModal;
