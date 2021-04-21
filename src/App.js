@@ -7,7 +7,9 @@ import Beer from './components/pages/Beer';
 import SearchBeers from './components/SearchBeers';
 import Footer from './components/Footer';
 
-{/* Renders all the applications */}
+{/* Renders all the components
+    The heart of this application
+*/}
 function App() {
   return (
   <>

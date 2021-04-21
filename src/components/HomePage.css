@@ -2,7 +2,7 @@
 
 
 
-
+{/* CSS for the video playing in HomePage and Beer page */}
 video {
   object-fit: cover;
   width: 100%;
@@ -10,8 +10,8 @@ video {
   position: fixed;
   z-index: -1;
 }
-{/* For the home page */}
 
+{/* For the home page */}
 .Home-container {
   height: 100vh;
   width: 100%;
@@ -24,7 +24,6 @@ video {
 }
 
 {/* for the beer page */}
-
 .Home-container2 {
   height: 100vh;
   width: 100%;

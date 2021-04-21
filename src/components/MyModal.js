@@ -3,8 +3,8 @@ import './MyModal.css';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 
-{/* My Modal takes in brewery information and Modal boolean to determine if Modal is displayed or not */}
-{/* Assigned to divs for alignment */}
+{/* MyModal component takes in brewery information and Boolean props to determine if Modal is displayed or not */}
+{/* Brewery information Assigned to divs for alignment on render */}
 const MyModal = ({showModal, setShowModal, brewery }) => {
     const breweryAddress = brewery.street
     const breweryPhone =<div> phone: {brewery.phone} </div>

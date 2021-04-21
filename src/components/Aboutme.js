@@ -4,7 +4,7 @@ import { Button } from './Button';
 import './Aboutme.css';
 
 {/* About me page
-
+    This component is called within Home component and will render information below
 
 ***/}
 function AboutMe(){
@@ -18,7 +18,7 @@ function AboutMe(){
       </p1>
       <p1> I am very interested in Modus because of how great the community is. I hope to be a part of that community soon.</p1>
       <p1>
-      </p1>   {/*Spacing */}
+      </p1>   {/* Extra p1 tags for spacing */}
       <p1>
       </p1>
       <p1> </p1>

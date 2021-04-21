@@ -4,7 +4,10 @@ import { Button } from './Button';
 import './HomePage.css';
 import Typical from 'react-typical';
 
-{/* This is my homepage*/}
+{/* This is my homepage
+    Renders details down below. Uses Typical and button component.
+    Doesn't have footer because implemented within Home.js
+*/}
 
 function HomePage() {
   return (
@@ -32,7 +35,7 @@ function HomePage() {
           buttonSize='btn--large'
         >
         {/* Button will default to /Beer page */}
-          Click here to search for brewerys
+          Click here to search for breweries
         </Button>
       </div>
     </div>
