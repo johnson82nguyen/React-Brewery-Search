@@ -4,10 +4,10 @@ import { Button } from './Button';
 import { Link } from 'react-router-dom';
 
 {/* This is my Footer
-** This will be seen at the bottom (foot) of every page within this app
-** The Footer will contain information about Modus, and external links to their site
-Footer will also contain the source code of this application 
-  */}
+*** This will be seen at the bottom (foot) of every page within this app
+*** The Footer will contain information about Modus, and external links to their site
+*** Footer will also contain the source code of this application
+*/}
 
 function Footer() {
   return (
@@ -29,13 +29,14 @@ function Footer() {
             </Link>
           </div>
 
+            {/* This is the source code for this application */}
             <div id="div1">
               <Link to={{ pathname: "https://github.com" }} target = "_blank">
                 check out that source code
               </Link>
             </div>
 
-
+          {/* Clicking this will link to Modus Facebook Page */}
           <div class='social-icons'>
           <Link
             class='social-icon-link facebook'
@@ -45,6 +46,8 @@ function Footer() {
           >
             <i class='fab fa-facebook-f' />
           </Link>
+
+          {/* Clicking this will link us to Modus twitter page */}
             <Link
               class='social-icon-link twitter'
               to={{ pathname: "https://twitter.com/modusengagement?lang=en" }}
@@ -53,6 +56,8 @@ function Footer() {
             >
               <i class='fab fa-twitter' />
             </Link>
+
+          {/* Clicking this will link us to Modus Linkedin page*/}
             <Link
               class='social-icon-link twitter'
               to={{ pathname: "https://www.linkedin.com/company/modusengagement/" }}

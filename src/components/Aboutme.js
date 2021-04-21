@@ -6,7 +6,7 @@ import './Aboutme.css';
 {/* About me page
 
 
-  ***/}
+***/}
 function AboutMe(){
   return (
     <div className='Home-container3'>

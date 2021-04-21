@@ -6,8 +6,8 @@ import AboutMe from '../Aboutme';
 
 {/* This is my Home page
 
-When <Home/> is called in App() it will render this function.
-Func Home() will render HomePage, AboutMe, and Footer
+ When <Home/> is called in App() it will render this function.
+ Func Home() will render HomePage, AboutMe, and Footer
 
 */}
 

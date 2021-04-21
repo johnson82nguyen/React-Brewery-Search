@@ -26,11 +26,12 @@ function HomePage() {
       </p>
       <p>Final project for Modus</p>
       <div className='Home-btns'>
-        <Button                
+        <Button
           className='btns'
           buttonStyle='btn--outline'
           buttonSize='btn--large'
         >
+        {/* Button will default to /Beer page */}
           Click here to search for brewerys
         </Button>
       </div>
