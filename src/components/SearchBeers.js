@@ -7,13 +7,10 @@ import { Button } from './Button';
 
 function SearchBeers() {
 
-
     const [input, setInput] = useState("");
     const [breweries, setBreweries] = useState([]);
     const [emptyResult, setEmptyResult] = useState(false);
-
     const [showModal, setShowModal] = useState(false);
-
 
     const openModal = () => {
       setShowModal(prev => !prev)
@@ -95,18 +92,18 @@ function SearchBeers() {
                         >
                         <i class="fas fa-eraser"></i>
                         </Button>
-                    </div>
-                    <div class="buttondiv">
-                    <Button
-                      className='btns'
-                      buttonStyle='btn--outline'
-                      buttonSize='btn--large'
-                      onClick={openModal}
 
-                    >
-                    Toggle detailed view
-                    </Button>
+                        <Button
+                          className='btns3'
+                          buttonStyle='btn--outline'
+                          buttonSize='btn--large'
+                          onClick={openModal}
+                        >
+                        Brewery Details
+                        </Button>
+
                     </div>
+
                     <ul className='Content'> {breweriesArr} </ul>
                     {emptyResult === true && ( <p className="p10">N/A</p> ) }
                   </div>

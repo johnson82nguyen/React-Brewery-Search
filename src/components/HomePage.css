@@ -1,3 +1,8 @@
+{/* Styling for my Homepage */}
+
+
+
+
 video {
   object-fit: cover;
   width: 100%;
@@ -5,9 +10,9 @@ video {
   position: fixed;
   z-index: -1;
 }
+{/* For the home page */}
 
 .Home-container {
-  /* background: url('/images/img-home.jpg') center center/cover no-repeat; */
   height: 100vh;
   width: 100%;
   display: flex;
@@ -18,8 +23,9 @@ video {
   object-fit: contain;
 }
 
-.Home-container2 { /* for the beer page */
-  /* background: url('/images/img-home.jpg') center center/cover no-repeat; */
+{/* for the beer page */}
+
+.Home-container2 {
   height: 100vh;
   width: 100%;
   display: inline-block;
@@ -63,6 +69,7 @@ video {
   margin-left: 4px;
 }
 
+{/* Styling for mobile users */}
 @media screen and (max-width: 960px) {
   .Home-container > h1 {
     font-size: 70px;

@@ -3,6 +3,10 @@ import '../App.css';
 import { Button } from './Button';
 import './Aboutme.css';
 
+{/* About me page
+
+
+  ***/}
 function AboutMe(){
   return (
     <div className='Home-container3'>
@@ -14,7 +18,7 @@ function AboutMe(){
       </p1>
       <p1> I am very interested in Modus because of how great the community is. I hope to be a part of that community soon.</p1>
       <p1>
-      </p1>
+      </p1>   {/*Spacing */}
       <p1>
       </p1>
       <p1> </p1>

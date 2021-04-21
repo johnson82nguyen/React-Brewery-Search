@@ -4,6 +4,8 @@ import { Button } from './Button';
 import './HomePage.css';
 import Typical from 'react-typical';
 
+{/* This is my homepage*/}
+
 function HomePage() {
   return (
     <div className='Home-container'>
@@ -24,7 +26,7 @@ function HomePage() {
       </p>
       <p>Final project for Modus</p>
       <div className='Home-btns'>
-        <Button
+        <Button                
           className='btns'
           buttonStyle='btn--outline'
           buttonSize='btn--large'

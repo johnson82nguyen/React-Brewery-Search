@@ -1,4 +1,5 @@
 
+{/* Styling for the buttons I used in Home and Beer page*/}
 
 :root{
   --primary: #fff;
@@ -13,15 +14,6 @@
 
 }
 
-.btn3{
-  padding: 8px 20px;
-  border-radius: 2px;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  length: 50px;
-
-}
 
 .btn--primary{
   background-color: var(--primary);
@@ -50,6 +42,7 @@
 
 }
 
+{/* Hover effects */}
 .btn--medium:hover, .btn--large:hover{
   background: #fff;
   color: #242424;

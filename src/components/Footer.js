@@ -3,6 +3,12 @@ import './Footer.css';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
 
+{/* This is my Footer
+** This will be seen at the bottom (foot) of every page within this app
+** The Footer will contain information about Modus, and external links to their site
+Footer will also contain the source code of this application 
+  */}
+
 function Footer() {
   return (
     <div className='footer-container'>
