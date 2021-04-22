@@ -22,6 +22,7 @@ function SearchBreweries() {
   {/* Used to check state of modal, whether we want to display or not */}
   const [showModal, setShowModal] = useState(false);
 
+  {/* Used to check state of individual brewery for Modal display */}
   const [selectedBrewery, setSelectedBrewery] = useState([]);
 
 
