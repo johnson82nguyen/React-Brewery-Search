@@ -14,9 +14,9 @@ git clone https://github.com/johnson82nguyen/modus.git
 ```
 
 ## Usage
-Once you have the final downloaded or cloned, navigate into the home directory in your terminal/command line. You'll know you're in the home directory if you see the src and public directories
+Once you have the final downloaded or cloned, navigate into the home directory in your terminal/command line. You'll know you're in the home directory if you see the src and public directories. To check run this in the command line
 
-``
+```
 ls
 ```
 
