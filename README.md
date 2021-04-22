@@ -22,6 +22,7 @@ ls
 
 If you see src or public directories you're good to go
 
+Navigate to home by 
 
 ```python
 cd modus-main 
