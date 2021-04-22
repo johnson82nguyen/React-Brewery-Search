@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import { Button } from './Button';
+import { Button } from '../Button/Button';
 import { Link } from 'react-router-dom';
 
 {/* This is my Footer
@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 *** The Footer will contain information about Modus, and external links to their site
 *** Footer will also contain the source code of this application
 */}
+
 function Footer() {
   return (
     <div className='footer-container'>

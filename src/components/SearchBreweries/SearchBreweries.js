@@ -1,12 +1,14 @@
-import React, { useState} from 'react';
-import './SearchBeers.css';
-import HomePage from './HomePage';
-import Footer from './Footer';
-import MyModal from './MyModal';
-import { Button } from './Button';
+import React, { useState, useEffect} from 'react';
+import ReactDOM from 'react-dom';
+import './SearchBreweries.css';
+import HomePage from '../HomePage/HomePage';
+import Footer from '../Footer/Footer';
+import DetailModal from '../DetailModal/DetailModal';
+import { Button } from '../Button/Button';
+import { render } from '@testing-library/react';
 
 {/* Function will search for breweries and return a list */}
-function SearchBeers() {
+function SearchBreweries() {
 
   {/* breweries initially empty, once breweries fetched, setBreweries will be filled */}
   const [breweries, setBreweries] = useState([]);
@@ -14,64 +16,74 @@ function SearchBeers() {
   {/* Used to check if input is empty */}
   const [emptyResult, setEmptyResult] = useState(false);
 
-  {/* search input set to empty initially, setSearchInput later updates when user searches for a brewery */}
+  {/* search input set to empty initially, setSearchInput later updates when user searches for a brewery*/}
   const [searchInput, setSearchInput] = useState("");
 
   {/* Used to check state of modal, whether we want to display or not */}
   const [showModal, setShowModal] = useState(false);
 
-  {/* Opens Modal
-      Each click sets true to false
-      meaning open and then close
-  */}
-  const openModal = () => {
-    setShowModal(prev => !prev)
-  }
+  const [selectedBrewery, setSelectedBrewery] = useState([]);
+
 
   {/* Used to clear Breweries Array
       Upon click, setBreweries back to Empty Array
-      Clearing the result should also hide the modal
   */}
   const clearResults = () => {
-    setSearchInput("");
     setBreweries([]);
     setEmptyResult(false);
-    setShowModal(false);
+    setSearchInput("");
   };
 
-   {/*
-   Makes a fetch call to Openbrewerydb api
-   Fetches the data
-   If data results are less than one, then there are no JSON items
-   */}
-   const fetchBreweries = () => {
-     fetch(`https://api.openbrewerydb.org/breweries/search?query=${searchInput}`)
-       .then((response) => response.json())
-       .then((data) => { if (data.length < 1) { setEmptyResult(true); }
-     {/* Sets the JSON objects to setBreweries array */}
-     setBreweries(data);
-      })
-    };
 
-  {/* Map breweries to BreweriesList
-    Dynamically sorts breweries by name
-    Makes all breweries into Div tags containing name, city, and state
-    Also contains a hidden modal only shown onClick down below
+  {/*
+  Makes a fetch call to Openbrewerydb api
+  Fetches the data
   */}
+  const fetchBreweries = () => {
+    fetch(`https://api.openbrewerydb.org/breweries/search?query=${searchInput}`)
+      .then((response) => response.json())
+      .then((data) => { if (data.length < 1) 
+                          { setEmptyResult(true); }
+
+        setBreweries(data);
+    });
+  
+  };
+
+  const fetchSingleBrewery = (id) => {
+    // setBreweryId(id);
+    
+    fetch(`https://api.openbrewerydb.org/breweries/${id}`)
+    .then((response) => response.json())
+    .then((data) => { 
+    {/* Sets the JSON objects to setBreweries array */}
+    setSelectedBrewery(data);
+    setShowModal(prev => !prev);
+    
+    // setIsFetchingBrewery(false);
+    })
+  };
+
   const breweriesList = breweries.sort(function (x, y) {
     if (x.name < y.name) { return -1;}
     if (x.name > y.name) { return 1; }
     return 0;})
-    .map((brewery) => (
-    <>
-    <li>
-      {/* Brewery name, city, and state mapped into a div to display */}
-      <div> <h1 className="cash">{brewery.name}</h1> <p> {brewery.city + ", " + brewery.state} </p> </div>
-    </li>
-    {/* My modal won't be triggered unless setShowModal is triggered to true by an onClick event */}
-    <MyModal showModal={showModal} setShowModal={setShowModal} brewery={brewery}/>
-    </>
-    ));
+  .map((brewery) => {
+    return (<li>
+    <div className="brewery" id={brewery.id} key={brewery.id}  > 
+      <h1 className="brewery-title">{brewery.name}</h1> 
+      <p> {brewery.city + ", " + brewery.state} 
+      </p> 
+      <Button
+        className='btns3'
+        buttonStyle='btn--outline'
+        buttonSize='btn--large'
+        onClick={() =>  fetchSingleBrewery(brewery.id) } >
+        Brewery Details
+      </Button>
+    </div>
+  </li>
+    )});
 
     return (
     <>
@@ -109,26 +121,23 @@ function SearchBeers() {
         </Button>
 
         {/* Modal button, onClick show details of that brewery*/}
-        <Button
-          className='btns3'
-          buttonStyle='btn--outline'
-          buttonSize='btn--large'
-          onClick={openModal}>
-          Brewery Details
-        </Button>
     </div>
         {/* List of breweries
-            if emptyResult then return N/A */}
-        <ul className='Content'> {breweriesList}
+          if emptyResult then return N/A */}
+        <ul className='Content'> 
+        {breweriesList}
+
         {emptyResult === true &&
         ( <p className="p10">N/A
           </p> ) }
         </ul>
+        
+        {showModal ? <DetailModal showModal = {showModal} setShowModal = {setShowModal} selectedBrewery = {selectedBrewery} /> : null}
     </div>
-
+    
     </>
     );
+        
 
-{/* End of code*/ }
 }
-export default SearchBeers;
+export default SearchBreweries;

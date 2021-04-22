@@ -1,8 +1,3 @@
-{/* Styling for my Homepage */}
-
-
-
-{/* CSS for the video playing in HomePage and Beer page */}
 video {
   object-fit: cover;
   width: 100%;
@@ -11,7 +6,6 @@ video {
   z-index: -1;
 }
 
-{/* For the home page */}
 .Home-container {
   height: 100vh;
   width: 100%;
@@ -23,7 +17,6 @@ video {
   object-fit: contain;
 }
 
-{/* for the beer page */}
 .Home-container2 {
   height: 100vh;
   width: 100%;
@@ -68,7 +61,6 @@ video {
   margin-left: 4px;
 }
 
-{/* Styling for mobile users */}
 @media screen and (max-width: 960px) {
   .Home-container > h1 {
     font-size: 70px;

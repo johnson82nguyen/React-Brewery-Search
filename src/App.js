@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import Navbar from './components/Navbar';
+import Navbar from './components/Navbar/Navbar';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import Home from './components/pages/Home';
-import Beer from './components/pages/Beer';
-import SearchBeers from './components/SearchBeers';
-import Footer from './components/Footer';
+import Home from './pages/Home';
+import Beer from './pages/Beer';
+import SearchBreweries from './components/SearchBreweries/SearchBreweries';
+import Footer from './components/Footer/Footer';
 
 {/* Renders all the components
     The heart of this application
