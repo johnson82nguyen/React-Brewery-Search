@@ -34,6 +34,14 @@ This will download all the dependencies needed in order to make this project run
 npm start
 ```
 
+## react-scripts not found?
+
+If you're running into this issue running the code, run the following command
+
+```
+npm install --save react-tinder-card --legacy-peer-deps
+```
+
 ## Conclusion
 
 I hope you guys enjoy my application. feel free to use my application if you are looking for breweries. It is always extremely fun to learn new technologies and concepts. Feel free to download the source code. The source code has detailed comments explaining the functionality of every component. Let me know if you have any questions! Have a good day :)
