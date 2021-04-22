@@ -1,9 +1,9 @@
 # Final Project
 
-This is my final project. This application allows users to search for breweries. This application runs on a javascript library called React.js 
+This is my final project. This application allows users to search for breweries from the Openbrewerydb api. This application runs on a javascript library called React.js 
 ## Installation
 
-To run this project, make sure you have the correct [node](https://nodejs.org/en/) installed on your device. Once you have node installed on your device you can either download the zip from Github or you can clone it to your device. To clone it to your device, run
+To run this project, make sure you have the correct [node](https://nodejs.org/en/) installed on your device. Once you have node installed on your device you can either download the zip from Github or you can clone it to your device. To clone it to your device by HTTPS, run
 ```bash
 $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 ```
@@ -24,16 +24,16 @@ or
 cd modus
 ```
 
-Once you're in the main directory run
+After making it to the main directory run
 
 ```
 npm install
 ```
-To run the application run 
+This will download all the dependencies needed in order to make this project run. To start the project run the command below once the dependecies are downloaded
 ```
 npm start
 ```
 
 ## Conclusion
 
-I hope you guys enjoy my application. It is always extremely fun to learn new technologies and concepts. Feel free to download it. Let me know if you have any questions! Have a good day :)
+I hope you guys enjoy my application. If there are breweries you are looking for, feel free to use my application. It is always extremely fun to learn new technologies and concepts. Feel free to download it the source code. The source code has detailed comments explaining the functionality of every component. Let me know if you have any questions! Have a good day :)
