@@ -5,3 +5,42 @@
   text-align: center;
    overflow:auto;
 }
+
+.my-modal
+  {
+    position: fixed;
+
+    left: 25%;
+    top: 30%;
+
+    width: 50%;
+
+    border: 1px solid #011627;
+    border-radius: 1em;
+    box-shadow: -2px 5px 5px #E71D36;
+
+    background-color: #F0F8FF;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    color: #011627;
+}
+
+.modal-contents
+{
+  background-color: #F0F8FF;
+  font-size: 30px;
+  padding-top: 100px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+.button-div
+{
+  padding-top: 50px;
+
+}

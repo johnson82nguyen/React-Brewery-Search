@@ -2,11 +2,11 @@ import React from 'react';
 import './Button.css';
 import { Link } from 'react-router-dom';
 
-{/*    Array of styles  */}
+{/* Array of styles */}
 const STYLES = ['btn--primary', 'btn--outline', 'btn--test'];
 
 
-{/*    Array of sizes  */}
+{/* Array of sizes */}
 const SIZES = ['btn--medium', 'btn--large'];
 
 
@@ -24,7 +24,7 @@ export const Button = ({
 
   const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
 
-{/*  Default button if clicked on will port to Beer page  */}
+{/* Default button if clicked on will port to Beer page */}
   return (
     <Link to='/Beer' className='btn-mobile'>
       <button

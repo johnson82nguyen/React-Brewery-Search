@@ -22,7 +22,7 @@ function HomePage() {
       "Hi Modus team!", 1500,
       "I'm a Software Engineer",2000,
       "I'm a Computer Scientist",2000,
-      "I'm a UMN graduate",2000,
+      "I'm a college graduate",2000,
       "I'm a lover of all music",2000,
       "I'm a tennis/basketball player ",2000,
       "Welcome to my project!",7000]} />

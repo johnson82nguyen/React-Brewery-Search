@@ -37,43 +37,47 @@ function SearchBreweries() {
 
   {/*
   Makes a fetch call to Openbrewerydb api
-  Fetches the data
+  Fetches the data into setBreweries []
   */}
   const fetchBreweries = () => {
     fetch(`https://api.openbrewerydb.org/breweries/search?query=${searchInput}`)
       .then((response) => response.json())
-      .then((data) => { if (data.length < 1) 
+      .then((data) => { if (data.length < 1)
                           { setEmptyResult(true); }
 
         setBreweries(data);
     });
-  
-  };
 
+  };
+  {/* Fetches single brewery for modal use */}
   const fetchSingleBrewery = (id) => {
     // setBreweryId(id);
-    
+
     fetch(`https://api.openbrewerydb.org/breweries/${id}`)
     .then((response) => response.json())
-    .then((data) => { 
+    .then((data) => {
     {/* Sets the JSON objects to setBreweries array */}
     setSelectedBrewery(data);
     setShowModal(prev => !prev);
-    
+
     // setIsFetchingBrewery(false);
     })
   };
 
+  {/* Sorts list of breweries by name, then maps each brewery to html element
+      Will be display a list of html elements
+      Displayed when fetchBreweries is called later
+  */}
   const breweriesList = breweries.sort(function (x, y) {
     if (x.name < y.name) { return -1;}
     if (x.name > y.name) { return 1; }
     return 0;})
   .map((brewery) => {
     return (<li>
-    <div className="brewery" id={brewery.id} key={brewery.id}  > 
-      <h1 className="brewery-title">{brewery.name}</h1> 
-      <p> {brewery.city + ", " + brewery.state} 
-      </p> 
+    <div className="brewery" id={brewery.id} key={brewery.id}  >
+      <h1 className="brewery-title">{brewery.name}</h1>
+      <p> {brewery.city + ", " + brewery.state}
+      </p>
       <Button
         className='btns3'
         buttonStyle='btn--outline'
@@ -102,7 +106,7 @@ function SearchBreweries() {
          placeholder='Search for a brewery'
          onChange={(e) => setSearchInput(e.target.value)}/>
 
-        {/*Search button, onClick return array of Breweries */}
+        {/* Search button, onClick return array of Breweries */}
         <Button
           className='btns'
           buttonStyle='btn--outline'
@@ -120,24 +124,23 @@ function SearchBreweries() {
           <i class="fas fa-eraser"></i>
         </Button>
 
-        {/* Modal button, onClick show details of that brewery*/}
     </div>
         {/* List of breweries
-          if emptyResult then return N/A */}
-        <ul className='Content'> 
+            if emptyResult then return N/A */}
+        <ul className='Content'>
         {breweriesList}
 
         {emptyResult === true &&
         ( <p className="p10">N/A
           </p> ) }
         </ul>
-        
+
         {showModal ? <DetailModal showModal = {showModal} setShowModal = {setShowModal} selectedBrewery = {selectedBrewery} /> : null}
     </div>
-    
+
     </>
     );
-        
+
 
 }
 export default SearchBreweries;
