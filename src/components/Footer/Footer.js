@@ -31,7 +31,7 @@ function Footer() {
 
             {/* This is the source code for this application */}
             <div id="div1">
-              <Link to={{ pathname: "https://github.com" }} target = "_blank">
+              <Link to={{ pathname: "https://github.com/johnson82nguyen/modus" }} target = "_blank">
                 check out that source code
               </Link>
             </div>
