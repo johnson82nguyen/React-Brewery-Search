@@ -49,6 +49,7 @@ If you're running into this issue running the code, run the following command
 ```
 npm install --save react-tinder-card --legacy-peer-deps
 ```
+now try running ```npm start``` again
 
 ## Conclusion
 
