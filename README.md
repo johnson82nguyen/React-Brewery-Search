@@ -1,6 +1,6 @@
 # Final Project
 
-This is my final project. This application allows users to search for breweries using the Openbrewerydb api. This application runs on a javascript library called React.js which allows for a fully responsive application.
+This is my final project. This application allows users to search for breweries. This application runs on a javascript library called React.js which allows for a fully responsive application.
 ## Installation
 
 To run this project, make sure you have the correct [node](https://nodejs.org/en/) installed on your device. Once you have node installed on your device you can either download the zip from Github or you can clone it to your device. To clone it to your device by HTTPS, run
@@ -22,7 +22,7 @@ ls
 
 If you see src or public directories you're good to go
 
-Navigate to home by 
+otherwise check again by navigating to home 
 
 ```python
 cd modus-main 
