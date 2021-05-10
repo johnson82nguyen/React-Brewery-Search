@@ -3,7 +3,7 @@
 This is my final project. This application allows users to search for breweries. This application runs on a javascript library called React.js which allows for a fully responsive application.
 ## Installation
 
-To run this project, make sure you have the correct [node](https://nodejs.org/en/) installed on your device. Once you have node installed on your device you can either download the zip from Github or you can clone it to your device. To clone it to your device by HTTPS, run
+To run this project, make sure you have the correct [node v. 16.1.0](https://nodejs.org/en/) installed on your device. Once you have node installed on your device you can either download the zip from Github or you can clone it to your device. To clone it to your device by HTTPS, run
 ```bash
 $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 ```
